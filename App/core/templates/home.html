@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Food Input Form</h2>
+    
+    <form id="foodForm">
+        <label for="foodName">Food Name:</label>
+        <input type="text" id="foodName" name="foodName" required>
+        <br>
+        
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+        <br>
+
+        <!-- Replace "https://example.com" with your desired link -->
+        <button type="submit" onclick="redirectToLink()">Submit</button>
+    </form>
+
+    <script>
+        function red(){
+            
+        }
+        function redirectToLink() {
+            var foodName = document.getElementById("foodName").value;
+            var quantity = document.getElementById("quantity").value;
+            var link = "https://example.com?food=" + encodeURIComponent(foodName) + "&quantity=" + encodeURIComponent(quantity);
+            window.location.href = link;
+        }
+    </script>
+</body>
+</html>
